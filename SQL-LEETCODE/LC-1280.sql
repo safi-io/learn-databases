@@ -3,14 +3,10 @@ use LEETCODESQL;
 -- solution
 -- un solved yet, (wrong solution, use cross join must to solve)
 
-SELECT Stud.student_id, Stud.student_name, Sub.subject_name
+SELECT Stud.*, Exam.*
 FROM Students Stud
 CROSS JOIN
-Examinations Exam
-ON Exam.student_id = Stud.student_id
-LEFT JOIN
-Subjects Sub
-ON Exam.subject_name = Sub.subject_name;
+Examinations Exam;
 
 -- Problem
 Create table If Not Exists Students (student_id int, student_name varchar(20));
